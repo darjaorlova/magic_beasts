@@ -25,3 +25,7 @@ jobs:
       # Format code
       - name: Check Code Format
         run: dart format . --set-exit-if-changed
+
+      # Analyze code
+      - name: Run Flutter analyze
+        run: flutter analyze
