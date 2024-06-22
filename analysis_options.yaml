@@ -1,6 +1,7 @@
 include: all_lints.yaml
 
-errors:
+analyzer:
+  errors:
     included_file_warning: ignore
 
 linter:
