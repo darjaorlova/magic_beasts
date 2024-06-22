@@ -3,17 +3,12 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 
-class AqualisView extends StatefulWidget {
+class AqualisView extends StatelessWidget {
   const AqualisView({super.key});
 
   @override
-  State<AqualisView> createState() => _AqualisViewState();
-}
-
-class _AqualisViewState extends State<AqualisView> {
-  @override
   Widget build(BuildContext context) {
-    var maxH = MediaQuery.of(context).size.height;
+    var maxH = MediaQuery.sizeOf(context).height;
     return Scaffold(
       body: Stack(
         children: [
@@ -21,6 +16,7 @@ class _AqualisViewState extends State<AqualisView> {
             child: Image.asset(
               'resources/images/bg_underwater.webp',
               fit: BoxFit.cover,
+              semanticLabel: 'Underwater background',
             ),
           ),
           ClipRRect(
@@ -40,6 +36,7 @@ class _AqualisViewState extends State<AqualisView> {
                   'resources/images/aqualis.png',
                   height: maxH * 0.65,
                   fit: BoxFit.contain,
+                  semanticLabel: 'Aqualis',
                 )
                     .animate()
                     .fadeIn(

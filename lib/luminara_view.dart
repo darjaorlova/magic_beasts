@@ -3,17 +3,12 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 
-class LuminaraView extends StatefulWidget {
+class LuminaraView extends StatelessWidget {
   const LuminaraView({super.key});
 
   @override
-  State<LuminaraView> createState() => _LuminaraViewState();
-}
-
-class _LuminaraViewState extends State<LuminaraView> {
-  @override
   Widget build(BuildContext context) {
-    var maxH = MediaQuery.of(context).size.height;
+    var maxH = MediaQuery.sizeOf(context).height;
     return Scaffold(
       body: Stack(
         children: [
@@ -21,6 +16,7 @@ class _LuminaraViewState extends State<LuminaraView> {
             child: Image.asset(
               'resources/images/bg_forest_pink.webp',
               fit: BoxFit.cover,
+              semanticLabel: 'Pink forest background',
             ),
           ),
           ClipRRect(
@@ -40,6 +36,7 @@ class _LuminaraViewState extends State<LuminaraView> {
                   'resources/images/luminara.png',
                   height: maxH * 0.9,
                   fit: BoxFit.contain,
+                  semanticLabel: 'Luminara',
                 )
                     .animate()
                     .fadeIn(

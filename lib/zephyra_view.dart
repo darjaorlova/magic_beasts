@@ -3,17 +3,12 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 
-class ZephyraView extends StatefulWidget {
+class ZephyraView extends StatelessWidget {
   const ZephyraView({super.key});
 
   @override
-  State<ZephyraView> createState() => _ZephyraViewState();
-}
-
-class _ZephyraViewState extends State<ZephyraView> {
-  @override
   Widget build(BuildContext context) {
-    var maxH = MediaQuery.of(context).size.height;
+    var maxH = MediaQuery.sizeOf(context).height;
     return Scaffold(
       body: Stack(
         children: [
@@ -21,6 +16,7 @@ class _ZephyraViewState extends State<ZephyraView> {
             child: Image.asset(
               'resources/images/bg_forest_green.webp',
               fit: BoxFit.cover,
+              semanticLabel: 'Green forest background',
             ),
           ),
           ClipRRect(
@@ -40,6 +36,7 @@ class _ZephyraViewState extends State<ZephyraView> {
                   'resources/images/zephyra.png',
                   height: maxH * 0.85,
                   fit: BoxFit.contain,
+                  semanticLabel: 'Zephyra',
                 )
                     .animate()
                     .fadeIn(

@@ -3,17 +3,12 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 
-class ShadowfelisView extends StatefulWidget {
+class ShadowfelisView extends StatelessWidget {
   const ShadowfelisView({super.key});
 
   @override
-  State<ShadowfelisView> createState() => _ShadowfelisViewState();
-}
-
-class _ShadowfelisViewState extends State<ShadowfelisView> {
-  @override
   Widget build(BuildContext context) {
-    var maxH = MediaQuery.of(context).size.height;
+    var maxH = MediaQuery.sizeOf(context).height;
     return Scaffold(
       body: Stack(
         children: [
@@ -21,6 +16,7 @@ class _ShadowfelisViewState extends State<ShadowfelisView> {
             child: Image.asset(
               'resources/images/bg_forest.webp',
               fit: BoxFit.cover,
+              semanticLabel: 'Forest background',
             ),
           ),
           ClipRRect(
@@ -40,6 +36,7 @@ class _ShadowfelisViewState extends State<ShadowfelisView> {
                   'resources/images/shadowfelis.png',
                   height: maxH * 0.9,
                   fit: BoxFit.contain,
+                  semanticLabel: 'Shadowfelis',
                 )
                     .animate()
                     .fadeIn(

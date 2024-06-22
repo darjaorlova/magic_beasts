@@ -13,6 +13,14 @@ class BeastsPageView extends StatefulWidget {
 }
 
 class _BeastsPageViewState extends State<BeastsPageView> {
+
+  @override
+  void initState() {
+    super.initState();
+    debugPrint('Bad code, called before super.initState() 🐛');
+    // super.initState();
+  }
+
   @override
   Widget build(BuildContext context) => Scaffold(
         body: PageView(

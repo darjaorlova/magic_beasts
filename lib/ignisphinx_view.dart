@@ -3,23 +3,21 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 
-class IgnisphinxView extends StatefulWidget {
+class IgnisphinxView extends StatelessWidget {
   const IgnisphinxView({super.key});
 
   @override
-  State<IgnisphinxView> createState() => _IgnisphinxViewState();
-}
-
-class _IgnisphinxViewState extends State<IgnisphinxView> {
-  @override
   Widget build(BuildContext context) {
-    var maxH = MediaQuery.of(context).size.height;
+    var maxH = MediaQuery.sizeOf(context).height;
     return Scaffold(
       body: Stack(
         children: [
           Positioned.fill(
-            child:
-                Image.asset('resources/images/bg_red.webp', fit: BoxFit.cover),
+            child: Image.asset(
+              'resources/images/bg_red.webp',
+              fit: BoxFit.cover,
+              semanticLabel: 'Red background',
+            ),
           ),
           ClipRRect(
             child: BackdropFilter(
@@ -38,6 +36,7 @@ class _IgnisphinxViewState extends State<IgnisphinxView> {
                   'resources/images/ignisphinx.png',
                   height: maxH * 0.75,
                   fit: BoxFit.contain,
+                  semanticLabel: 'Ignisphinx',
                 )
                     .animate()
                     .fadeIn(
