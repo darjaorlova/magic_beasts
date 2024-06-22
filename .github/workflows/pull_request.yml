@@ -48,6 +48,10 @@ jobs:
         if: '!cancelled()'
         run: dcm check-code-duplication lib --ci-key="${{ secrets.DCM_CI_KEY }}" --email="${{ secrets.DCM_EMAIL }}"
 
+      - name: Run DCM Analyze Widgets
+        if: '!cancelled()'
+        run: dcm analyze-widgets --show-similarity lib --ci-key="${{ secrets.DCM_CI_KEY }}" --email="${{ secrets.DCM_EMAIL }}"
+
       - name: Check Code Format
         if: '!cancelled()'
         run: dart format . --set-exit-if-changed
