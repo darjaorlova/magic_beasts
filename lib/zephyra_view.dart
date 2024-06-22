@@ -22,7 +22,7 @@ class _ZephyraViewState extends State<ZephyraView> {
       ClipRRect(
           child: BackdropFilter(
               filter: ImageFilter.blur(sigmaX: 12, sigmaY: 12),
-              child: SizedBox.expand())),
+              child: const SizedBox.expand())),
       Align(
           alignment: Alignment.bottomRight,
           child: Transform(
@@ -41,16 +41,16 @@ class _ZephyraViewState extends State<ZephyraView> {
                           delay: 300.ms,
                           duration: 1000.ms,
                           curve: Curves.easeIn,
-                          begin: Offset(-100, 20),
-                          end: Offset(0, 0))))),
+                          begin: const Offset(-100, 20),
+                          end: const Offset(0, 0))))),
       Align(
           alignment: Alignment.topRight,
           child: Padding(
-              padding: EdgeInsets.only(top: 48, right: 32, left: 16),
+              padding: const EdgeInsets.only(top: 48, right: 32, left: 16),
               child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Zephyra',
+                    const Text('Zephyra',
                             textAlign: TextAlign.left,
                             style: TextStyle(
                                 color: Color(0xFFECE8D7),
@@ -68,7 +68,7 @@ class _ZephyraViewState extends State<ZephyraView> {
                             delay: 600.ms,
                             duration: 1000.ms,
                             curve: Curves.easeIn),
-                    Text('The Zephyra is a guardian of the enchanted skies it inhabits, bringing peace and tranquility to its surroundings. Legends tell of lost travelers and sailors who were guided to safety by the gentle light of a Zephyra. Its presence is believed to purify and bless the skies, making them a source of healing and magic. Despite its mystical appearance, the Zephyra is a gentle and approachable being, often interacting with those who show respect and reverence for the air and its creatures',
+                    const Text('The Zephyra is a guardian of the enchanted skies it inhabits, bringing peace and tranquility to its surroundings. Legends tell of lost travelers and sailors who were guided to safety by the gentle light of a Zephyra. Its presence is believed to purify and bless the skies, making them a source of healing and magic. Despite its mystical appearance, the Zephyra is a gentle and approachable being, often interacting with those who show respect and reverence for the air and its creatures',
                             textAlign: TextAlign.left,
                             style: TextStyle(
                                 color: Color(0xFFECE8D7),

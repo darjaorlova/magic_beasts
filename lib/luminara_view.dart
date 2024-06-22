@@ -24,7 +24,7 @@ class _LuminaraViewState extends State<LuminaraView> {
       ClipRRect(
           child: BackdropFilter(
               filter: ImageFilter.blur(sigmaX: 12, sigmaY: 12),
-              child: SizedBox.expand())),
+              child: const SizedBox.expand())),
       Align(
           alignment: Alignment.bottomRight,
           child: Transform(
@@ -43,15 +43,15 @@ class _LuminaraViewState extends State<LuminaraView> {
                           delay: 300.ms,
                           duration: 1000.ms,
                           curve: Curves.easeIn,
-                          begin: Offset(100, 20),
-                          end: Offset(0, 0))))),
+                          begin: const Offset(100, 20),
+                          end: const Offset(0, 0))))),
       Align(
           alignment: Alignment.topRight,
           child: Padding(
-              padding: EdgeInsets.only(top: 48, right: 16, left: 32),
+              padding: const EdgeInsets.only(top: 48, right: 16, left: 32),
               child:
                   Column(crossAxisAlignment: CrossAxisAlignment.end, children: [
-                Text('Luminara',
+                const Text('Luminara',
                         textAlign: TextAlign.right,
                         style: TextStyle(
                             color: Color(0xFFECE8D7),
@@ -67,7 +67,7 @@ class _LuminaraViewState extends State<LuminaraView> {
                     .animate()
                     .fadeIn(
                         delay: 600.ms, duration: 1000.ms, curve: Curves.easeIn),
-                Text('The Luminara is a beacon of light and tranquility in the mystical realms it inhabits. Its presence is said to bring peace and healing to those who encounter it. Legends tell of travelers lost in the dark, enchanted woods who were guided to safety by the gentle glow of a Luminara. Its antlers, inscribed with ancient runes, are believed to possess powerful protective magic, warding off dark spirits and malevolent forces.',
+                const Text('The Luminara is a beacon of light and tranquility in the mystical realms it inhabits. Its presence is said to bring peace and healing to those who encounter it. Legends tell of travelers lost in the dark, enchanted woods who were guided to safety by the gentle glow of a Luminara. Its antlers, inscribed with ancient runes, are believed to possess powerful protective magic, warding off dark spirits and malevolent forces.',
                         textAlign: TextAlign.right,
                         style: TextStyle(
                             color: Color(0xFFECE8D7),

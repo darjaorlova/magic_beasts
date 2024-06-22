@@ -16,7 +16,7 @@ class _BeastsPageViewState extends State<BeastsPageView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: PageView(children: [
+        body: PageView(children: const [
       ShadowfelisView(),
       ZephyraView(),
       AqualisView(),

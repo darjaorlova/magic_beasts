@@ -22,7 +22,7 @@ class _ShadowfelisViewState extends State<ShadowfelisView> {
       ClipRRect(
           child: BackdropFilter(
               filter: ImageFilter.blur(sigmaX: 12, sigmaY: 12),
-              child: SizedBox.expand())),
+              child: const SizedBox.expand())),
       Align(
           alignment: Alignment.bottomRight,
           child: Transform(
@@ -41,15 +41,15 @@ class _ShadowfelisViewState extends State<ShadowfelisView> {
                           delay: 300.ms,
                           duration: 1000.ms,
                           curve: Curves.easeIn,
-                          begin: Offset(100, 20),
-                          end: Offset(0, 0))))),
+                          begin: const Offset(100, 20),
+                          end: const Offset(0, 0))))),
       Align(
           alignment: Alignment.topRight,
           child: Padding(
-              padding: EdgeInsets.only(top: 48, right: 16, left: 32),
+              padding: const EdgeInsets.only(top: 48, right: 16, left: 32),
               child:
                   Column(crossAxisAlignment: CrossAxisAlignment.end, children: [
-                Text('Shadowfelis',
+                const Text('Shadowfelis',
                         textAlign: TextAlign.right,
                         style: TextStyle(
                             color: Color(0xFFECE8D7),
@@ -65,7 +65,7 @@ class _ShadowfelisViewState extends State<ShadowfelisView> {
                     .animate()
                     .fadeIn(
                         delay: 600.ms, duration: 1000.ms, curve: Curves.easeIn),
-                Text('The Shadowfelis is a rare and enigmatic magical beast, often found lurking in the depths of ancient, enchanted forests. Resembling a large cat, this creature boasts sleek, mystical fur adorned with dark, shimmering patterns that seem to ripple and change with the light. Its large, hauntingly glowing eyes possess an eerie, otherworldly intelligence, reflecting both wisdom and a hint of mischief.',
+                const Text('The Shadowfelis is a rare and enigmatic magical beast, often found lurking in the depths of ancient, enchanted forests. Resembling a large cat, this creature boasts sleek, mystical fur adorned with dark, shimmering patterns that seem to ripple and change with the light. Its large, hauntingly glowing eyes possess an eerie, otherworldly intelligence, reflecting both wisdom and a hint of mischief.',
                         textAlign: TextAlign.right,
                         style: TextStyle(
                             color: Color(0xFFECE8D7),

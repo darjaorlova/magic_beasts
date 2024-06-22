@@ -22,7 +22,7 @@ class _IgnisphinxViewState extends State<IgnisphinxView> {
       ClipRRect(
           child: BackdropFilter(
               filter: ImageFilter.blur(sigmaX: 12, sigmaY: 12),
-              child: SizedBox.expand())),
+              child: const SizedBox.expand())),
       Align(
           alignment: Alignment.bottomLeft,
           child: Transform(
@@ -41,16 +41,16 @@ class _IgnisphinxViewState extends State<IgnisphinxView> {
                           delay: 300.ms,
                           duration: 1000.ms,
                           curve: Curves.easeIn,
-                          begin: Offset(-100, 20),
-                          end: Offset(0, 0))))),
+                          begin: const Offset(-100, 20),
+                          end: const Offset(0, 0))))),
       Align(
           alignment: Alignment.topRight,
           child: Padding(
-              padding: EdgeInsets.only(top: 48, right: 32, left: 16),
+              padding: const EdgeInsets.only(top: 48, right: 32, left: 16),
               child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Ignisphinx',
+                    const Text('Ignisphinx',
                             textAlign: TextAlign.left,
                             style: TextStyle(
                                 color: Color(0xFFECE8D7),
@@ -68,7 +68,7 @@ class _IgnisphinxViewState extends State<IgnisphinxView> {
                             delay: 600.ms,
                             duration: 1000.ms,
                             curve: Curves.easeIn),
-                    Text('The Ignisphinx is a guardian of the enchanted fire realms it inhabits, bringing both awe and fear to those who encounter it. Legends tell of ancient warriors and travelers who were granted protection and strength by the Ignisphinx. Its presence is believed to purify and bless the surrounding lands, making them a source of powerful magic and vitality. Despite its fiery and intimidating appearance, the Ignisphinx is a noble and wise being, often interacting with those who show courage and respect for the elements. The Ignisphinx\'s regal and commanding aura makes it a symbol of power and protection in the magical world.',
+                    const Text('The Ignisphinx is a guardian of the enchanted fire realms it inhabits, bringing both awe and fear to those who encounter it. Legends tell of ancient warriors and travelers who were granted protection and strength by the Ignisphinx. Its presence is believed to purify and bless the surrounding lands, making them a source of powerful magic and vitality. Despite its fiery and intimidating appearance, the Ignisphinx is a noble and wise being, often interacting with those who show courage and respect for the elements. The Ignisphinx\'s regal and commanding aura makes it a symbol of power and protection in the magical world.',
                             textAlign: TextAlign.left,
                             style: TextStyle(
                                 color: Color(0xFFECE8D7),
