@@ -30,3 +30,7 @@ linter:
 
     # Docs
     public_member_api_docs: false
+
+dart_code_metrics:
+  extends:
+    - recommended
