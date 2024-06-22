@@ -13,7 +13,6 @@ class BeastsPageView extends StatefulWidget {
 }
 
 class _BeastsPageViewState extends State<BeastsPageView> {
-  
   @override
   void initState() {
     super.initState();

@@ -9,7 +9,6 @@ class AqualisView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var maxH = MediaQuery.sizeOf(context).height;
-    printName('Aqualis');
     return Scaffold(
       body: Stack(
         children: [
@@ -106,6 +105,4 @@ The Aqualis is a guardian of the enchanted waters it inhabits, bringing peace an
       ),
     );
   }
-
-  void printName(String name) => debugPrint(name);
 }
