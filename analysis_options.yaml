@@ -1,1 +1,16 @@
-include: package:flutter_lints/flutter.yaml
+include: all_lints.yaml
+
+linter:
+  rules:
+    - prefer_double_quotes: false
+    - prefer_single_quotes: true
+    - always_specify_types: false
+    - omit_local_variable_types: true
+    - avoid_types_on_closure_parameters: true
+    - prefer_final_fields: true
+    - prefer_final_parameters: false
+    - avoid_final_parameters: true
+    - prefer_relative_imports: false
+    - always_use_package_imports: true
+    - prefer_final_locals: false
+    - unnecessary_final: true
