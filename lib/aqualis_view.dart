@@ -52,7 +52,7 @@ class _AqualisViewState extends State<AqualisView> {
                       duration: 1000.ms,
                       curve: Curves.easeIn,
                       begin: const Offset(-100, 20),
-                      end: const Offset(0, 0),
+                      end: Offset.zero,
                     ),
               ),
             ),
@@ -86,7 +86,8 @@ class _AqualisViewState extends State<AqualisView> {
                         curve: Curves.easeIn,
                       ),
                   const Text(
-                    "The Aqualis is a guardian of the enchanted waters it inhabits, bringing peace and tranquility to its surroundings. Legends tell of lost sailors and travelers guided to safety by the gentle glow of an Aqualis. Its presence is believed to purify and bless the waters, making them a source of healing and magic. Despite its mystical appearance, the Aqualis is a gentle and approachable being, often interacting with those who show respect and reverence for the water and its creatures. The Aqualis's serene and calming aura makes it a symbol of hope and guidance in the magical world.",
+                    """
+The Aqualis is a guardian of the enchanted waters it inhabits, bringing peace and tranquility to its surroundings. Legends tell of lost sailors and travelers guided to safety by the gentle glow of an Aqualis. Its presence is believed to purify and bless the waters, making them a source of healing and magic. Despite its mystical appearance, the Aqualis is a gentle and approachable being, often interacting with those who show respect and reverence for the water and its creatures. The Aqualis's serene and calming aura makes it a symbol of hope and guidance in the magical world.""",
                     textAlign: TextAlign.left,
                     style: TextStyle(
                       color: Color(0xFFECE8D7),

@@ -52,7 +52,7 @@ class _ShadowfelisViewState extends State<ShadowfelisView> {
                       duration: 1000.ms,
                       curve: Curves.easeIn,
                       begin: const Offset(100, 20),
-                      end: const Offset(0, 0),
+                      end: Offset.zero,
                     ),
               ),
             ),
@@ -86,7 +86,8 @@ class _ShadowfelisViewState extends State<ShadowfelisView> {
                         curve: Curves.easeIn,
                       ),
                   const Text(
-                    'The Shadowfelis is a rare and enigmatic magical beast, often found lurking in the depths of ancient, enchanted forests. Resembling a large cat, this creature boasts sleek, mystical fur adorned with dark, shimmering patterns that seem to ripple and change with the light. Its large, hauntingly glowing eyes possess an eerie, otherworldly intelligence, reflecting both wisdom and a hint of mischief.',
+                    '''
+The Shadowfelis is a rare and enigmatic magical beast, often found lurking in the depths of ancient, enchanted forests. Resembling a large cat, this creature boasts sleek, mystical fur adorned with dark, shimmering patterns that seem to ripple and change with the light. Its large, hauntingly glowing eyes possess an eerie, otherworldly intelligence, reflecting both wisdom and a hint of mischief.''',
                     textAlign: TextAlign.right,
                     style: TextStyle(
                       color: Color(0xFFECE8D7),
