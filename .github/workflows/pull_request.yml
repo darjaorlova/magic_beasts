@@ -21,3 +21,7 @@ jobs:
       # Print Flutter version
       - name: Flutter Version
         run: flutter --version
+
+      # Format code
+      - name: Check Code Format
+        run: dart format . --set-exit-if-changed
