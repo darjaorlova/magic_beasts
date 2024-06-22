@@ -12,8 +12,6 @@ class BeastsPageView extends StatefulWidget {
   State<BeastsPageView> createState() => _BeastsPageViewState();
 }
 
-// TODO ask about this issue
-// ignore: prefer-declaring-const-constructor
 class _BeastsPageViewState extends State<BeastsPageView> {
   
   @override

@@ -6,6 +6,7 @@ dcm analyze lib
 dcm check-dependencies lib
 dcm check-unused-files --monorepo lib
 dcm check-unused-code --monorepo lib
+dcm check-code-duplication lib
 
 # Include these commands in Github Action
 #dcm check-exports-completeness lib

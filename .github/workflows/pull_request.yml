@@ -44,6 +44,10 @@ jobs:
         if: '!cancelled()'
         run: dcm check-unused-code --monorepo lib --ci-key="${{ secrets.DCM_CI_KEY }}" --email="${{ secrets.DCM_EMAIL }}"
 
+      - name: Run DCM Check Duplicate Code
+        if: '!cancelled()'
+        run: dcm check-code-duplication lib --ci-key="${{ secrets.DCM_CI_KEY }}" --email="${{ secrets.DCM_EMAIL }}"
+
       - name: Check Code Format
         if: '!cancelled()'
         run: dart format . --set-exit-if-changed
