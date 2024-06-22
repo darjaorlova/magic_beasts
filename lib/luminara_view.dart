@@ -9,7 +9,7 @@ class LuminaraView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var maxH = MediaQuery.sizeOf(context).height;
-    printName('Luminara');
+    printLuminara('Luminara');
     return Scaffold(
       body: Stack(
         children: [
@@ -107,5 +107,5 @@ The Luminara is a beacon of light and tranquility in the mystical realms it inha
     );
   }
 
-  void printName(String name) => debugPrint(name);
+  void printLuminara(String name) => debugPrint(name);
 }
