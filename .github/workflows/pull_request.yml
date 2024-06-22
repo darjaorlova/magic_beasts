@@ -42,7 +42,7 @@ jobs:
 
       - name: Run DCM Check Unused Code
         if: '!cancelled()'
-        run: check-unused-code --monorepo lib --ci-key="${{ secrets.DCM_CI_KEY }}" --email="${{ secrets.DCM_EMAIL }}"
+        run: dcm check-unused-code --monorepo lib --ci-key="${{ secrets.DCM_CI_KEY }}" --email="${{ secrets.DCM_EMAIL }}"
 
       - name: Check Code Format
         if: '!cancelled()'
