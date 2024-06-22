@@ -1,28 +1,31 @@
-import: all_lints.yaml
+include: all_lints.yaml
+
+errors:
+    included_file_warning: ignore
 
 linter:
   rules:
     # Quote preferences
-    - prefer_double_quotes: false
-    - prefer_single_quotes: true
+    prefer_double_quotes: false
+    prefer_single_quotes: true
 
     # Type specification
-    - always_specify_types: false
-    - omit_local_variable_types: true
+    always_specify_types: false
+    omit_local_variable_types: true
 
     # Final and const usage
-    - prefer_final_fields: true
-    - prefer_final_parameters: false
-    - avoid_final_parameters: true
-    - prefer_final_locals: false
-    - unnecessary_final: true
+    prefer_final_fields: true
+    prefer_final_parameters: false
+    avoid_final_parameters: true
+    prefer_final_locals: false
+    unnecessary_final: true
 
     # Closure parameters
-    - avoid_types_on_closure_parameters: true
+    avoid_types_on_closure_parameters: true
 
     # Import preferences
-    - prefer_relative_imports: false
-    - always_use_package_imports: true
+    prefer_relative_imports: false
+    always_use_package_imports: true
 
     # Docs
-    - public_member_api_docs: false
+    public_member_api_docs: false
