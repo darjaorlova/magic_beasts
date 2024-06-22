@@ -10,4 +10,8 @@ class MagicBeastsApp extends StatelessWidget {
         theme: ThemeData(primarySwatch: Colors.blue),
         home: const BeastsPageView(),
       );
+
+  void unusedMethod() {
+    debugPrint('This method is never called');
+  }
 }

@@ -19,7 +19,7 @@ jobs:
       - name: Flutter Version
         run: flutter --version
 
-      - name: Run Flutter analyze
+      - name: Run Flutter Analyze
         run: flutter analyze
 
       - name: Install DCM
@@ -27,11 +27,17 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Run DCM analyze
+      - name: Run DCM Analyze
         run: dcm analyze --ci-key="${{ secrets.DCM_CI_KEY }}" --email="${{ secrets.DCM_EMAIL }}" lib
 
-      - name: Run DCM check dependencies
+      - name: Run DCM Check Dependencies
         run: dcm check-dependencies lib --ci-key="${{ secrets.DCM_CI_KEY }}" --email="${{ secrets.DCM_EMAIL }}"
+
+      - name: Run DCM Check Unused Files
+        run: dcm check-unused-files --monorepo lib --ci-key="${{ secrets.DCM_CI_KEY }}" --email="${{ secrets.DCM_EMAIL }}"
+
+      - name: Run DCM Check Unused Code
+        run: check-unused-code --monorepo lib --ci-key="${{ secrets.DCM_CI_KEY }}" --email="${{ secrets.DCM_EMAIL }}"
 
       - name: Check Code Format
         run: dart format . --set-exit-if-changed
