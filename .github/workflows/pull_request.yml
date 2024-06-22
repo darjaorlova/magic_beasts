@@ -2,30 +2,33 @@ name: audit
 
 on:
   pull_request:
-    types: [opened, synchronize]
+    types: [ opened, synchronize ]
 
 jobs:
   analysis:
     name: audit
     runs-on: ubuntu-latest
     steps:
-      # Checkout the repository to the runner
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      # Set up Flutter environment
       - name: Set up Flutter
         uses: subosito/flutter-action@v1
       - run: flutter pub get
 
-      # Print Flutter version
       - name: Flutter Version
         run: flutter --version
 
-      # Analyze code
       - name: Run Flutter analyze
         run: flutter analyze
 
-      # Format code
+      - name: Install DCM
+        uses: CQLabs/setup-dcm@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Run DCM analyze
+        run: dcm analyze --ci-key="${{ secrets.DCM_CI_KEY }}" --email="${{ secrets.DCM_EMAIL }}" lib
+
       - name: Check Code Format
         run: dart format . --set-exit-if-changed
