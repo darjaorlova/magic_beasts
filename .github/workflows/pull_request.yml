@@ -1,0 +1,24 @@
+name: audit
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  analysis:
+    name: audit
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout the repository to the runner
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      # Set up Flutter environment
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: 'latest'
+
+      # Echo Folder Contents
+      - name: Echo Folder Contents
+        run: echo $(ls)
