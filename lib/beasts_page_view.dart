@@ -14,14 +14,15 @@ class BeastsPageView extends StatefulWidget {
 
 class _BeastsPageViewState extends State<BeastsPageView> {
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        body: PageView(children: const [
-      ShadowfelisView(),
-      ZephyraView(),
-      AqualisView(),
-      LuminaraView(),
-      IgnisphinxView()
-    ]));
-  }
+  Widget build(BuildContext context) => Scaffold(
+        body: PageView(
+          children: const [
+            ShadowfelisView(),
+            ZephyraView(),
+            AqualisView(),
+            LuminaraView(),
+            IgnisphinxView(),
+          ],
+        ),
+      );
 }
