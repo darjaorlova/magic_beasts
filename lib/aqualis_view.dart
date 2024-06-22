@@ -18,18 +18,11 @@ class _AqualisViewState extends State<AqualisView> {
         body: Stack(children: [
       Positioned.fill(
           child: Image.asset('resources/images/bg_underwater.webp',
-              fit: BoxFit.cover
-
-
-          )),
+              fit: BoxFit.cover)),
       ClipRRect(
           child: BackdropFilter(
               filter: ImageFilter.blur(sigmaX: 12, sigmaY: 12),
-              child: SizedBox.expand())
-
-
-
-      ),
+              child: SizedBox.expand())),
       Align(
           alignment: Alignment.bottomLeft,
           child: Transform(
@@ -49,12 +42,7 @@ class _AqualisViewState extends State<AqualisView> {
                           duration: 1000.ms,
                           curve: Curves.easeIn,
                           begin: Offset(-100, 20),
-                          end: Offset(0, 0))))
-
-
-
-
-      ),
+                          end: Offset(0, 0))))),
       Align(
           alignment: Alignment.topRight,
           child: Padding(
