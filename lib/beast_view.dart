@@ -55,16 +55,11 @@ class BeastView extends StatelessWidget {
                   semanticLabel: name,
                 )
                     .animate()
-                    .fadeIn(
-                      delay: 300.ms,
-                      duration: 1000.ms,
-                      curve: Curves.easeIn,
-                    )
+                    .fadeIn(duration: 1000.ms, curve: Curves.easeIn)
                     .move(
-                      delay: 300.ms,
                       duration: 1000.ms,
                       curve: Curves.easeIn,
-                      begin: const Offset(-100, 20),
+                      begin: const Offset(100, 20),
                       end: Offset.zero,
                     ),
               ),
@@ -93,11 +88,7 @@ class BeastView extends StatelessWidget {
                         ),
                       ],
                     ),
-                  ).animate().fadeIn(
-                        delay: 600.ms,
-                        duration: 1000.ms,
-                        curve: Curves.easeIn,
-                      ),
+                  ).animate().fadeIn(duration: 1000.ms, curve: Curves.easeIn),
                   Text(
                     description,
                     textAlign: TextAlign.left,
@@ -107,11 +98,7 @@ class BeastView extends StatelessWidget {
                       height: 1.1,
                       fontFamily: 'Almendra',
                     ),
-                  ).animate().fadeIn(
-                        delay: 600.ms,
-                        duration: 1000.ms,
-                        curve: Curves.easeIn,
-                      ),
+                  ).animate().fadeIn(duration: 1000.ms, curve: Curves.easeIn),
                 ],
               ),
             ),
