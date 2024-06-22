@@ -1,0 +1,57 @@
+name: magic_beasts
+description: "Magic Beasts App"
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.4.1 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_animate: ^4.5.0
+  cupertino_icons: ^1.0.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - resources/
+    - resources/images/
+    - resources/fonts/
+
+  fonts:
+    - family: AnimalesFantastic
+      fonts:
+        - asset: resources/fonts/animales_fantastic.ttf
+    - family: FantasticBeast
+      fonts:
+        - asset: resources/fonts/fantastic_beast.otf
+    - family: HarryP
+      fonts:
+        - asset: resources/fonts/harryp.ttf
+    - family: MagicSchool1
+      fonts:
+        - asset: resources/fonts/magic_school_1.ttf
+    - family: MagicSchool2
+      fonts:
+        - asset: resources/fonts/magic_school_2.ttf
+    - family: Lumos
+      fonts:
+        - asset: resources/fonts/lumos.ttf
+    - family: ParryHotter
+      fonts:
+        - asset: resources/fonts/parry_hotter.ttf
+    - family: Almendra
+      fonts:
+        - asset: resources/fonts/Almendra-Regular.ttf
+        - asset: resources/fonts/Almendra-Italic.ttf
+          style: italic
+        - asset: resources/fonts/Almendra-Bold.ttf
+          weight: 800
