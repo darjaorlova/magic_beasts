@@ -67,7 +67,8 @@ class _LuminaraViewState extends State<LuminaraView> {
                     .animate()
                     .fadeIn(
                         delay: 600.ms, duration: 1000.ms, curve: Curves.easeIn),
-                const Text('The Luminara is a beacon of light and tranquility in the mystical realms it inhabits. Its presence is said to bring peace and healing to those who encounter it. Legends tell of travelers lost in the dark, enchanted woods who were guided to safety by the gentle glow of a Luminara. Its antlers, inscribed with ancient runes, are believed to possess powerful protective magic, warding off dark spirits and malevolent forces.',
+                const Text(
+                        'The Luminara is a beacon of light and tranquility in the mystical realms it inhabits. Its presence is said to bring peace and healing to those who encounter it. Legends tell of travelers lost in the dark, enchanted woods who were guided to safety by the gentle glow of a Luminara. Its antlers, inscribed with ancient runes, are believed to possess powerful protective magic, warding off dark spirits and malevolent forces.',
                         textAlign: TextAlign.right,
                         style: TextStyle(
                             color: Color(0xFFECE8D7),
