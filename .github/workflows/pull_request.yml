@@ -18,6 +18,6 @@ jobs:
         uses: subosito/flutter-action@v1
       - run: flutter pub get
 
-      # Echo Folder Contents
-      - name: Echo Folder Contents
-        run: echo $(ls)
+      # Print Flutter version
+      - name: Flutter Version
+        run: flutter --version
