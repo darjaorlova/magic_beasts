@@ -30,5 +30,8 @@ jobs:
       - name: Run DCM analyze
         run: dcm analyze --ci-key="${{ secrets.DCM_CI_KEY }}" --email="${{ secrets.DCM_EMAIL }}" lib
 
+      - name: Run DCM check dependencies
+        run: dcm check-dependencies lib --ci-key="${{ secrets.DCM_CI_KEY }}" --email="${{ secrets.DCM_EMAIL }}"
+
       - name: Check Code Format
         run: dart format . --set-exit-if-changed
