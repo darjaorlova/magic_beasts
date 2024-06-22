@@ -23,21 +23,27 @@ jobs:
         run: flutter analyze
 
       - name: Install DCM
+        if: '!cancelled()'
         uses: CQLabs/setup-dcm@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Run DCM Analyze
+        if: '!cancelled()'
         run: dcm analyze --ci-key="${{ secrets.DCM_CI_KEY }}" --email="${{ secrets.DCM_EMAIL }}" lib
 
       - name: Run DCM Check Dependencies
+        if: '!cancelled()'
         run: dcm check-dependencies lib --ci-key="${{ secrets.DCM_CI_KEY }}" --email="${{ secrets.DCM_EMAIL }}"
 
       - name: Run DCM Check Unused Files
+        if: '!cancelled()'
         run: dcm check-unused-files --monorepo lib --ci-key="${{ secrets.DCM_CI_KEY }}" --email="${{ secrets.DCM_EMAIL }}"
 
       - name: Run DCM Check Unused Code
+        if: '!cancelled()'
         run: check-unused-code --monorepo lib --ci-key="${{ secrets.DCM_CI_KEY }}" --email="${{ secrets.DCM_EMAIL }}"
 
       - name: Check Code Format
+        if: '!cancelled()'
         run: dart format . --set-exit-if-changed
