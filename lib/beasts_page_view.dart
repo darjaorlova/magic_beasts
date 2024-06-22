@@ -27,7 +27,7 @@ The Zephyra is a guardian of the enchanted skies it inhabits, bringing peace and
             BeastView(
               name: 'Luminara',
               description:
-              '''The Luminara is a beacon of light and tranquility in the mystical realms it inhabits. Its presence is said to bring peace and healing to those who encounter it. Legends tell of travelers lost in the dark, enchanted woods who were guided to safety by the gentle glow of a Luminara. Its antlers, inscribed with ancient runes, are believed to possess powerful protective magic, warding off dark spirits and malevolent forces.''',
+                  '''The Luminara is a beacon of light and tranquility in the mystical realms it inhabits. Its presence is said to bring peace and healing to those who encounter it. Legends tell of travelers lost in the dark, enchanted woods who were guided to safety by the gentle glow of a Luminara. Its antlers, inscribed with ancient runes, are believed to possess powerful protective magic, warding off dark spirits and malevolent forces.''',
               beastImage: 'resources/images/luminara.png',
               backgroundImage: 'resources/images/bg_forest_pink.webp',
               backgroundSemanticLabel: 'Pink forest background',
