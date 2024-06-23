@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:magic_beasts/firebase_analytics.dart';
 
 class BeastView extends StatelessWidget {
   const BeastView({
@@ -101,6 +102,24 @@ class BeastView extends StatelessWidget {
                   ).animate().fadeIn(duration: 1000.ms, curve: Curves.easeIn),
                 ],
               ),
+            ),
+          ),
+          Align(
+            alignment: Alignment.bottomRight,
+            child: Padding(
+              padding: const EdgeInsets.only(bottom: 32, right: 32),
+              child: FloatingActionButton(
+                onPressed: () {
+                  FirebaseAnalytics.logEvent(
+                    'share_beast_event_triggered_by_user_in_app',
+                  );
+                },
+                backgroundColor: const Color(0xFFECE8D7),
+                child: const Icon(
+                  Icons.share_outlined,
+                  color: Color(0xFF060B10),
+                ),
+              ).animate().fadeIn(duration: 1000.ms, curve: Curves.easeIn),
             ),
           ),
         ],

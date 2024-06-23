@@ -1,0 +1,12 @@
+name: magic_beasts_lints
+description: Sample lints for the Magic Beasts app
+version: 1.0.0
+
+environment:
+  sdk: ^3.4.3
+
+dependencies:
+  analyzer: ^6.4.0
+  analyzer_plugin: ^0.11.3
+  custom_lint: ^0.6.4
+  custom_lint_builder: ^0.6.4

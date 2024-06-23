@@ -7,6 +7,7 @@ dcm check-dependencies lib
 dcm check-unused-files --monorepo lib
 dcm check-unused-code --monorepo lib
 dcm check-code-duplication lib
+flutter pub run custom_lint
 dcm analyze-widgets --show-similarity lib
 dart format . --set-exit-if-changed
 

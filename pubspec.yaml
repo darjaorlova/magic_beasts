@@ -11,6 +11,14 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_animate: ^4.5.0
+  share_plus: ^9.0.0
+
+dev_dependencies:
+  custom_lint: ^0.6.4
+  flutter_test:
+    sdk: flutter
+  magic_beasts_lints:
+    path: ./magic_beasts_lints
 
 flutter:
   uses-material-design: true
