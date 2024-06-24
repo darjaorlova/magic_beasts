@@ -2,22 +2,60 @@ name: audit
 
 on:
   pull_request:
-    types: [opened, synchronize]
+    types: [ opened, synchronize ]
 
 jobs:
   analysis:
     name: audit
     runs-on: ubuntu-latest
     steps:
-      # Checkout the repository to the runner
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      # Set up Flutter environment
       - name: Set up Flutter
         uses: subosito/flutter-action@v1
       - run: flutter pub get
 
-      # Echo Folder Contents
-      - name: Echo Folder Contents
-        run: echo $(ls)
+      - name: Flutter Version
+        run: flutter --version
+
+      - name: Run Flutter Analyze
+        run: flutter analyze
+
+      - name: Install DCM
+        if: '!cancelled()'
+        uses: CQLabs/setup-dcm@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Run DCM Analyze
+        if: '!cancelled()'
+        run: dcm analyze --ci-key="${{ secrets.DCM_CI_KEY }}" --email="${{ secrets.DCM_EMAIL }}" lib
+
+      - name: Run DCM Check Dependencies
+        if: '!cancelled()'
+        run: dcm check-dependencies lib --ci-key="${{ secrets.DCM_CI_KEY }}" --email="${{ secrets.DCM_EMAIL }}"
+
+      - name: Run DCM Check Unused Files
+        if: '!cancelled()'
+        run: dcm check-unused-files --monorepo lib --ci-key="${{ secrets.DCM_CI_KEY }}" --email="${{ secrets.DCM_EMAIL }}"
+
+      - name: Run DCM Check Unused Code
+        if: '!cancelled()'
+        run: dcm check-unused-code --monorepo lib --ci-key="${{ secrets.DCM_CI_KEY }}" --email="${{ secrets.DCM_EMAIL }}"
+
+      - name: Run DCM Check Duplicate Code
+        if: '!cancelled()'
+        run: dcm check-code-duplication lib --ci-key="${{ secrets.DCM_CI_KEY }}" --email="${{ secrets.DCM_EMAIL }}"
+
+      - name: Run Custom Lints Check
+        if: '!cancelled()'
+        run: flutter pub run custom_lint
+
+      - name: Run DCM Analyze Widgets
+        if: '!cancelled()'
+        run: dcm analyze-widgets --show-similarity lib --ci-key="${{ secrets.DCM_CI_KEY }}" --email="${{ secrets.DCM_EMAIL }}"
+
+      - name: Check Code Format
+        if: '!cancelled()'
+        run: dart format . --set-exit-if-changed

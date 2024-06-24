@@ -1,6 +1,6 @@
 name: magic_beasts
 description: "Magic Beasts App"
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: 'none'
 
 version: 1.0.0+1
 
@@ -11,12 +11,13 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_animate: ^4.5.0
-  cupertino_icons: ^1.0.6
 
 dev_dependencies:
+  custom_lint: ^0.6.4
   flutter_test:
     sdk: flutter
-  flutter_lints: ^3.0.0
+  magic_beasts_lints:
+    path: ./magic_beasts_lints
 
 flutter:
   uses-material-design: true
