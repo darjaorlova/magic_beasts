@@ -3,10 +3,6 @@ include: all_lints.yaml
 analyzer:
   errors:
     included_file_warning: ignore
-  plugins:
-    - custom_lint
-  exclude:
-    - magic_beasts_lints/**
 
 linter:
   rules:
@@ -45,7 +41,3 @@ linter:
 dart_code_metrics:
   extends:
     - recommended
-
-custom_lint:
-  debug: true
-  verbose: true
