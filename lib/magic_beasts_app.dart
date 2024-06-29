@@ -5,9 +5,11 @@ class MagicBeastsApp extends StatelessWidget {
   const MagicBeastsApp({super.key});
 
   @override
-  Widget build(BuildContext context) => MaterialApp(
-        title: 'Magic Beasts',
-        theme: ThemeData(primarySwatch: Colors.blue),
-        home: const BeastsPageView(),
-      );
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Magic Beasts',
+      theme: ThemeData(primarySwatch: Colors.blue),
+      home: const BeastsPageView(),
+    );
+  }
 }

@@ -36,6 +36,9 @@ linter:
     public_member_api_docs: false
     diagnostic_describe_all_properties: false
 
+    # Syntax
+    prefer_expression_function_bodies: false
+
     # Abstract classes
     avoid_classes_with_only_static_members: false
 
