@@ -16,7 +16,6 @@ class FirebaseAnalyticsEventLengthRule extends DartLintRule {
     ErrorReporter reporter,
     CustomLintContext context,
   ) {
-    print('test more');
     context.registry.addMethodInvocation((node) {
       if (node.methodName.name == 'logEvent' &&
           node.argumentList.arguments.isNotEmpty) {
