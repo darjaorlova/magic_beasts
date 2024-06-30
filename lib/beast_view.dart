@@ -110,7 +110,7 @@ class BeastView extends StatelessWidget {
               padding: const EdgeInsets.only(bottom: 32, right: 32),
               child: FloatingActionButton(
                 onPressed: () {
-                  FirebaseAnalytics.logEvent('share_beast');
+                  FirebaseAnalytics.logEvent('share_beast_event_triggered_by_user_in_app');
                 },
                 backgroundColor: const Color(0xFFECE8D7),
                 child: const Icon(
