@@ -36,12 +36,17 @@ class BeastView extends StatelessWidget {
               semanticLabel: backgroundSemanticLabel,
             ),
           ),
+
+
           ClipRRect(
             child: BackdropFilter(
               filter: ImageFilter.blur(sigmaX: 12, sigmaY: 12),
               child: const SizedBox.expand(),
             ),
           ),
+
+
+
           Align(
             alignment: Alignment.bottomLeft,
             child: Transform(
